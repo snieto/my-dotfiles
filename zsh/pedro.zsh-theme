@@ -145,15 +145,15 @@ unpushed () {
 need_push () {
   if [[ $(unpushed) == "" ]]
   then
-    echo " "
+    echo ""
   else
-    echo " with %{$fg_bold[red]%}some unpushed stuff%{$reset_color%} "
+    echo ":%{$fg_bold[red]%}unpushed%{$reset_color%}"
   fi
 }
 
-PROMPT=$'\n%{$fg[cyan]%}%n%{$reset_color%} at %{$fg_bold[cyan]%}()pro%{$reset_color%} in %{$fg[green]%}%c%{$reset_color%}$(git_prompt_info)$(need_push)%{$fg_bold[green]%}<3%{$reset_color%} '
+PROMPT=$'\n%{$fg[cyan]%}%n%{$reset_color%} (%{$fg[green]%}%c%{$reset_color%}$(git_prompt_info)$(need_push)) %{$fg_bold[green]%}<3%{$reset_color%} '
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$reset_color%}%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}|%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN=""
