@@ -1,4 +1,4 @@
-export dotfiles=$HOME/my/dotfiles
+export dotfiles=$HOME/my/.dotfiles
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
