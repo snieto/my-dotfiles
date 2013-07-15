@@ -36,5 +36,7 @@ unset config_files
 
 source $dotfiles/zsh/pedro.zsh-theme
 
+export PATH="$dotfiles/bin:$PATH"
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

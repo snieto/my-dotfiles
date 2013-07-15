@@ -20,7 +20,10 @@ let mapleader = ","
 " ----------
 " Look and feel
 " ----------
-set guifont=Monaco:h17
+set colorcolumn=80
+highlight ColorColumn guibg=Gray14
+colorscheme tomorrow-night-eighties 
+set guifont=Monaco:h18
 set nu
 set numberwidth=4
 set tabstop=2
@@ -55,25 +58,7 @@ endif
 
 " Commands depending on file type 
 autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
-
-" --------
-" MAPPINGS
-" --------
-
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
-nnoremap j gj
-nnoremap k gk
-
-imap jk <ESC>
-nnoremap ; :
+autocmd FileType php set ai sw=4 sts=4 et
 
 " Search
 nmap <Space> /
@@ -94,9 +79,6 @@ noremap <S-tab> :bp<CR>
 nmap <leader>d :bd<CR>
 nmap <leader>D :bufdo bd<CR>
 nmap <silent> <leader>b :FufBuffer<CR>
-
-" Git blame
-vmap <leader>gb :Gblame<CR>
 
 " Rename current file
 function! RenameFile()
