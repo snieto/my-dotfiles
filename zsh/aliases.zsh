@@ -9,6 +9,7 @@ alias gd='git diff --color'
 alias gc='git commit'
 alias gco='git checkout -b'
 alias gb='git branch'
+alias ga='git add --all'
 alias s='git status -sb'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"

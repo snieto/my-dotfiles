@@ -21,7 +21,6 @@ let mapleader = ","
 " Look and feel
 " ----------
 set colorcolumn=80
-highlight ColorColumn guibg=Gray14
 colorscheme tomorrow-night-eighties 
 set guifont=Monaco:h18
 set nu
@@ -57,8 +56,11 @@ if has("gui_running")
 endif
 
 " Commands depending on file type 
-autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
-autocmd FileType php set ai sw=4 sts=4 et
+autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,twig set ai sw=2 sts=2 et
+autocmd FileType php set tabstop=4 softtabstop=4 shiftwidth=4
+
+highlight ColorColumn guibg=#2d2d2d
+let &colorcolumn=join(range(81,999),",")
 
 " Search
 nmap <Space> /
@@ -79,6 +81,12 @@ noremap <S-tab> :bp<CR>
 nmap <leader>d :bd<CR>
 nmap <leader>D :bufdo bd<CR>
 nmap <silent> <leader>b :FufBuffer<CR>
+
+" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " Rename current file
 function! RenameFile()
