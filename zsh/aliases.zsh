@@ -10,11 +10,31 @@ alias gc='git commit'
 alias gco='git checkout -b'
 alias gb='git branch'
 alias ga='git add --all'
+alias gs='git status'
 alias s='git status -sb'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias r="rspec --color"
-alias p="phpunit --debug"
+#alias p="phpunit --debug"
 alias rmf="rm -Rf"
-
+alias sshz="ssh zeus"
+alias sshdev="ssh root@dev.chicisimo.com"
+alias magcall='ssh zeus.onestic.com php /home/snieto/webapps/magento/web/cleanAllCache.php'
+alias ts='~/my/code/chicisimo-old/web/bin/phpunit ~/my/code/chicisimo-old/web/wp-content/plugins/on-search/Sphinx/test'
+alias sshst='ssh root@static01.hostinet.chicisimo.com'
+alias sshfront1='ssh root@front01.hostinet.chicisimo.com'
+alias sshback1='ssh root@back01.hostinet.chicisimo.com'
+alias p='bin/phpunit'
+alias rmf='rm -Rf'
+alias dev='cd ~/my/code/chicisimo-dev/web'
+alias vag='cd ~/my/code/chicisimo-dev/vagrant'
+alias hosts='sudo vim /private/etc/hosts'
+alias p='ssh vagrant@192.168.100.100 "cd /var/www/current && bin/phpunit --debug"'
+alias pc='ssh root@192.168.69.10 "cd /var/webs/chicisimo-dev/web && bin/phpunit --debug"'
+alias al= "vim ~/my/.dotfiles/zsh/aliases.zsh"
+alias vm="cd /my/dev/chicisimo/vm/"
+alias code="cd ~/my/code"
+alias vu="vagrant up"
+alias vs="vagrant suspend"
 # thanks to holman (https://github.com/holman/dotfiles/blob/master)
+#
