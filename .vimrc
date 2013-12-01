@@ -20,7 +20,7 @@ let mapleader = ","
 " ----------
 " Look and feel
 " ----------
-set colorcolumn=80
+"set colorcolumn=80
 colorscheme tomorrow-night-eighties 
 set guifont=Monaco:h18
 set nu
@@ -59,8 +59,8 @@ endif
 autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber,twig set ai sw=2 sts=2 et
 autocmd FileType php set tabstop=4 softtabstop=4 shiftwidth=4
 
-highlight ColorColumn guibg=#2d2d2d
-let &colorcolumn=join(range(81,999),",")
+"highlight ColorColumn guibg=#2d2d2d
+"let &colorcolumn=join(range(81,999),",")
 
 " Search
 nmap <Space> /
