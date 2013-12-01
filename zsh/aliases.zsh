@@ -15,7 +15,7 @@ alias s='git status -sb'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias r="rspec --color"
-#alias p="phpunit --debug"
+alias p="phpunit --debug"
 alias rmf="rm -Rf"
 alias sshz="ssh zeus"
 alias sshdev="ssh root@dev.chicisimo.com"
